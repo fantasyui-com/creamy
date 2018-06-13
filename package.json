@@ -1,0 +1,20 @@
+{
+  "name": "creamy",
+  "version": "1.0.0",
+  "description": "Creamy CSS Borders",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fantasyui-com/creamy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fantasyui-com/creamy/issues"
+  },
+  "homepage": "https://github.com/fantasyui-com/creamy#readme"
+}
