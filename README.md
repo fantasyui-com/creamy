@@ -1,6 +1,8 @@
 # creamy
 Creamy CSS Borders
 
+![](screenshot.png)
+
 ## About
 box-shadow based css borders with realistic colors and bevels
 
