@@ -1,8 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 
-const spue = require('spue');
+const spue = require('../spue');
 const phantasm = require('phantasm');
+const graboid = require('graboid');
 
 module.exports = function(options){
 
@@ -21,8 +22,9 @@ module.exports = function(options){
       const background = data[0];
       const shadows = [];
 
-      data.forEach(function(color,index){
-        shadows.push({"offsetX":0, "offsetY":0, "blurRadius":1, "spreadRadius":index*options.step+1, color});
+
+      graboid(16, data).forEach(function(color,index){
+        shadows.push({"offsetX":0, "offsetY":0, "blurRadius":0, "spreadRadius":index*options.step+1, color});
       })
 
       let item  = { id, name, background, shadows, };
