@@ -2,13 +2,13 @@ const fs = require('fs');
 const path = require('path');
 
 const spue = require('spue');
-const phantasm = require('../phantasm');
+const phantasm = require('phantasm');
 
 module.exports = function(options){
 
   if(options.generate){
 
-    if(!options.step) options.step = 3;
+    if(!options.step) options.step = 1;
 
     spue({input: options.file}, function(err, data){
       const content = JSON.parse(fs.readFileSync(path.join(__dirname,'creamy.json')).toString());
@@ -18,13 +18,14 @@ module.exports = function(options){
 
       const id = String.fromCharCode(letterIndex);
       const name = path.basename(options.file, '.png');
+      const background = data[0];
       const shadows = [];
 
       data.forEach(function(color,index){
         shadows.push({"offsetX":0, "offsetY":0, "blurRadius":1, "spreadRadius":index*options.step+1, color});
       })
 
-      let item  = { id, name, shadows, };
+      let item  = { id, name, background, shadows, };
       content.data.push(item);
 
       console.log(JSON.stringify(content, null, '  '))
