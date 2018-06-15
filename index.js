@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const spue = require('../spue');
+const spue = require('spue');
 const phantasm = require('phantasm');
 const graboid = require('graboid');
 
