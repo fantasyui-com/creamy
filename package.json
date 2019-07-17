@@ -18,10 +18,10 @@
   },
   "homepage": "https://github.com/fantasyui-com/creamy#readme",
   "dependencies": {
-    "chickpea": "^1.5.0",
-    "graboid": "^1.1.0",
-    "phantasm": "^1.2.0",
-    "random-inclusive": "^1.2.0",
+    "chickpea": "^1.7.0",
+    "graboid": "^1.3.0",
+    "phantasm": "^1.3.0",
+    "random-inclusive": "^1.3.0",
     "spue": "^1.5.0"
   }
 }
